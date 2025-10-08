@@ -8,7 +8,7 @@ public class Timer
     private float currentTime;
     private bool isRunning;
 
-    public void Start(float time = 2)
+    public void Start(float time = 0)
     {
         currentTime = time;
         isRunning = true;
@@ -22,9 +22,9 @@ public class Timer
             return;
         }
 
-        currentTime -= deltaTime;
+        currentTime += deltaTime;
 
-        if (currentTime < 0)
+        if (currentTime >= 5)
         {
             isRunning = false;
             onComplete?.Invoke();

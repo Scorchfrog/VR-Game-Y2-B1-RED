@@ -49,12 +49,7 @@ public class Detection : MonoBehaviour
                 {
                     Ingredient.Add(collision.gameObject);
                 }
-                
-                
-
-
             }
-            
         }
     }
 
@@ -124,8 +119,7 @@ public class Detection : MonoBehaviour
         collisionTracker.collidingObjects.Clear();
         for (int i = 0; i < Ingredient.Count; i++)
         {
-            Destroy(Ingredient[i]);
-            
+            Destroy(Ingredient[i]);  
         }
         Ingredient.Clear();
         Debug.Log("ingredient count" + Ingredient.Count);
