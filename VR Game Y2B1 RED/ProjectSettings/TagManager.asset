@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Dirt
+  - knob
+  - Carrot
+  - Power
+  - Something
+  - Speed
+  - Hoe
+  - Whiteboard
+  - GrownCarrot
+  - Seed
+  - Speewer
   layers:
   - Default
   - TransparentFX

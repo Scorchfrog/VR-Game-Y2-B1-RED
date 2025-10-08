@@ -41,7 +41,7 @@ public class Ingredient : MonoBehaviour
                 if (!Thingie.Contains(other.gameObject))
                 {
                     Thingie.Add(other.gameObject);
-                    Debug.Log("Skibidi", other);
+                    
                 }
             }
                 
@@ -51,7 +51,7 @@ public class Ingredient : MonoBehaviour
         {
             other.gameObject.transform.rotation = spawn.transform.rotation;
             other.gameObject.transform.position = spawn.transform.position;
-            Debug.Log("object moves");
+            //Debug.Log("object moves");
         }
     }
 
@@ -66,7 +66,7 @@ public class Ingredient : MonoBehaviour
                 if (!Thingie.Contains(other.gameObject))
                 {
                     Thingie.Remove(other.gameObject);
-                    Debug.Log("Skibidi");
+                    //Debug.Log("Skibidi");
                 }
             }
             
@@ -125,7 +125,7 @@ public class Ingredient : MonoBehaviour
             Destroy(Thingie[i]);
         }
         Thingie.Clear();
-        Debug.Log("ingredient count" + Thingie.Count);
+        //Debug.Log("ingredient count" + Thingie.Count);
 
 
     }

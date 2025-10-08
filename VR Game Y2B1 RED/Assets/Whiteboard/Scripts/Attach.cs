@@ -30,10 +30,9 @@ public class DirtCarry : MonoBehaviour
         Rigidbody rb = dirt.GetComponent<Rigidbody>();
         if (rb != null) rb.isKinematic = true;
 
-        // Attach to hoe's carry point\
+        // Attach to hoe's carry point
         
         dirt.transform.SetParent(carryPoint, true);
-        
         dirt.transform.localPosition = Vector3.zero;
         dirt.transform.localRotation = Quaternion.identity;
         

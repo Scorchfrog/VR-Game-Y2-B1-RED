@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: aaafd434006766a4ab00d0b34542d379, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,4 +277,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05141c93c9894834092a9eb300528f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3692001101358887271}
+  Thingie: []
+  vegetables: 
+  collisionTracker: {fileID: 0}
+  spawn: {fileID: 0}
+  Product: []
+  Particle: {fileID: 0}
+  carry: {fileID: 0}
