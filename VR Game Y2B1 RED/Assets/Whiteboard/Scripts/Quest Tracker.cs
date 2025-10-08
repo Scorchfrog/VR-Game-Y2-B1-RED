@@ -7,7 +7,7 @@ public class QuestTracker : MonoBehaviour
     public int questAmount = 1;
     public GameObject spawn;
     public GameObject seedPrefab;
-    public List<GameObject> Seed = new List<GameObject>();
+    
 
     void Update()
     {
