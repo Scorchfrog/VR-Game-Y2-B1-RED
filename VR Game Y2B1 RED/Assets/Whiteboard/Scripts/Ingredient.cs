@@ -51,7 +51,13 @@ public class Ingredient : MonoBehaviour
         {
             other.gameObject.transform.rotation = spawn.transform.rotation;
             other.gameObject.transform.position = spawn.transform.position;
-            //Debug.Log("object moves");
+            Debug.Log("object moves");
+        }
+
+        if (other.CompareTag("Carrot"))
+        {
+            other.gameObject.transform.localScale = spawn.transform.localScale;
+            other.gameObject.transform.position = spawn.transform.position;
         }
     }
 

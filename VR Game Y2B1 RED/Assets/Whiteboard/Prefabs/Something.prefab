@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4386184658675090779}
   - component: {fileID: 2380120555502432905}
   - component: {fileID: 2565538196677801040}
-  - component: {fileID: 4083810686958695944}
   m_Layer: 0
   m_Name: Something
   m_TagString: Power
@@ -265,22 +264,3 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
---- !u!114 &4083810686958695944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6012888248891774590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05141c93c9894834092a9eb300528f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Thingie: []
-  vegetables: 
-  collisionTracker: {fileID: 0}
-  spawn: {fileID: 0}
-  Product: []
-  Particle: {fileID: 0}
-  carry: {fileID: 0}
