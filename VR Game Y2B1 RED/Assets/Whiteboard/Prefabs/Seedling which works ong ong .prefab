@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6064968205657649886
+--- !u!1 &957656081888951497
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5744645138808578451}
+  - component: {fileID: 7738597249654623721}
+  - component: {fileID: 5368343720849405079}
+  m_Layer: 0
+  m_Name: 'Seedling which works ong ong '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7738597249654623721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957656081888951497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6993096, y: 0.296, z: 2.8529608}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3272031382707393205}
+  - {fileID: 8180402489805521262}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5368343720849405079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957656081888951497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc478097c0ec6a041818fef77f4122db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growth: {fileID: 370827218145724230}
+--- !u!1 &4427730210211572935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5904759766951468057}
   m_Layer: 0
   m_Name: Spawn
   m_TagString: Untagged
@@ -16,22 +63,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5744645138808578451
+--- !u!4 &5904759766951468057
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6064968205657649886}
+  m_GameObject: {fileID: 4427730210211572935}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4268090704148736281}
+  m_Father: {fileID: 3272031382707393205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &7111977720318731317
+--- !u!1 &4780186351182500703
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,11 +86,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4268090704148736281}
-  - component: {fileID: 2717979035844058502}
-  - component: {fileID: 4270687247252473724}
-  - component: {fileID: 8864776692561685540}
-  - component: {fileID: 3615740717860482456}
+  - component: {fileID: 3272031382707393205}
+  - component: {fileID: 1370479642501033837}
+  - component: {fileID: 3320632369420046086}
+  - component: {fileID: 6637578809256308971}
+  - component: {fileID: 370827218145724230}
   m_Layer: 0
   m_Name: SeedlingCarrot
   m_TagString: Seed
@@ -51,38 +98,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4268090704148736281
+--- !u!4 &3272031382707393205
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111977720318731317}
+  m_GameObject: {fileID: 4780186351182500703}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.296, y: 0.644, z: -8.75}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.02, y: 0.04, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4257509968383310157}
-  - {fileID: 5744645138808578451}
-  m_Father: {fileID: 0}
+  - {fileID: 5904759766951468057}
+  m_Father: {fileID: 7738597249654623721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2717979035844058502
+--- !u!33 &1370479642501033837
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111977720318731317}
+  m_GameObject: {fileID: 4780186351182500703}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4270687247252473724
+--- !u!23 &3320632369420046086
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111977720318731317}
+  m_GameObject: {fileID: 4780186351182500703}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -121,13 +167,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8864776692561685540
+--- !u!65 &6637578809256308971
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111977720318731317}
+  m_GameObject: {fileID: 4780186351182500703}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -142,33 +188,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3615740717860482456
+--- !u!114 &370827218145724230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7111977720318731317}
+  m_GameObject: {fileID: 4780186351182500703}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c154b9f0a793134a9d1f71f03efb6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   carrot: {fileID: 3759675578277015558, guid: f0d454622007c3743863ab293c05002d, type: 3}
-  spawn: {fileID: 6064968205657649886}
+  spawn: {fileID: 4427730210211572935}
   CarrotsGrown: 0
   condition: 0
   growthProgress: 0
   growthTime: 30
   speedMultiplier: 1
-  hydration: 1
---- !u!1001 &4131628425029654073
+  hydration: 0
+--- !u!1001 &8342188589533310490
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4268090704148736281}
+    m_TransformParent: {fileID: 7738597249654623721}
     m_Modifications:
     - target: {fileID: 163194926461841268, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,13 +259,13 @@ PrefabInstance:
     - target: {fileID: 2691391350032234812, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
       propertyPath: growth
       value: 
-      objectReference: {fileID: 3615740717860482456}
+      objectReference: {fileID: 370827218145724230}
     - target: {fileID: 4509974579183781129, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
       propertyPath: m_Name
       value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 5752657280013249903, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
-      propertyPath: m_IsTrigger
+      propertyPath: m_Center.y
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -227,8 +273,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
---- !u!4 &4257509968383310157 stripped
+--- !u!4 &8180402489805521262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 163194926461841268, guid: c645a783ca1b00c449371ad09801a1a3, type: 3}
-  m_PrefabInstance: {fileID: 4131628425029654073}
+  m_PrefabInstance: {fileID: 8342188589533310490}
   m_PrefabAsset: {fileID: 0}

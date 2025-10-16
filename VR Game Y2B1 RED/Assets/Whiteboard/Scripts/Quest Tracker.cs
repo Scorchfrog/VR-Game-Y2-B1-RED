@@ -7,7 +7,10 @@ public class QuestTracker : MonoBehaviour
     public int questAmount = 1;
     public GameObject spawn;
     public GameObject seedPrefab;
-    
+    public int totalCarrots = 0;
+    public bool questOne = false;
+    public List<GameObject> Thingie = new List<GameObject>();
+
 
     void Update()
     {
@@ -17,20 +20,29 @@ public class QuestTracker : MonoBehaviour
             GameObject seedInstance = GameObject.FindWithTag("Seed"); 
             if (seedInstance != null)
                 growth = seedInstance.GetComponent<Growth>();
-                
-        }
 
-        // Once growth is known, check for quest completion
-        if (growth != null && growth.CarrotsGrown == questAmount)
-        {
             
+        }
+        
+
+        // destroy seed
+        if (growth != null && growth.CarrotsGrown == 1)
+        {
+            if (!Thingie.Contains(growth.gameObject))
+            {
+                growth.condition = true;
+                totalCarrots++;
+                Debug.Log("Carrots grown " + totalCarrots/2);
+            }
+
+        }
+        if(totalCarrots/2 == 4 && questOne == false)
+        {
             Vector3 spawnPos = spawn.transform.position;
             Instantiate(seedPrefab, spawnPos, Quaternion.identity);
-            growth.condition = true;
             
-           // Debug.Log("Reward Granted"+growth);
-            
-             
+            questOne = true;
         }
+        
     }
 }

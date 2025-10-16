@@ -12,14 +12,16 @@ public class Ingredient : MonoBehaviour
     public bool[] vegetables;
     [SerializeField]
     CollisionTracker collisionTracker;
-    bool dirt = false;
+    public bool dirt = false;
     [SerializeField]
     public GameObject spawn;
     [SerializeField]
     public GameObject[] Product;
     [SerializeField]
     public ParticleSystem Particle;
-    public DirtCarry carry;
+    public GameObject crop;
+    
+    
 
     private void Update()
     {
@@ -32,11 +34,11 @@ public class Ingredient : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Untagged"))
+        if (!other.CompareTag("Dirt"))
         {
             
             Planted(other.tag, true);
-            if (!other.CompareTag("Dirt") && !other.CompareTag("Hoe"))
+            if (!other.CompareTag("HoedDirt") && !other.CompareTag("Hoe") && !other.CompareTag("Player") && !other.CompareTag("wCan"))
             {
                 if (!Thingie.Contains(other.gameObject))
                 {
@@ -47,11 +49,18 @@ public class Ingredient : MonoBehaviour
                 
             
         }
-        if (other.CompareTag("Dirt") && carry.Attached == false)
+        if (other.CompareTag("HoedDirt"))
         {
             other.gameObject.transform.rotation = spawn.transform.rotation;
             other.gameObject.transform.position = spawn.transform.position;
-            Debug.Log("object moves");
+            //Debug.Log("object moves");
+        }
+
+        if (other.CompareTag("Dirt"))
+        {
+            other.gameObject.transform.rotation = spawn.transform.rotation;
+            other.gameObject.transform.position = spawn.transform.position;
+            //Debug.Log("object moves");
         }
 
         if (other.CompareTag("Carrot"))
@@ -63,11 +72,11 @@ public class Ingredient : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Untagged"))
+        if (!other.CompareTag("Dirt"))
         {
             
             Planted(other.tag, false);
-            if (!other.CompareTag("Hoe") && !other.CompareTag("Dirt"))
+            if (!other.CompareTag("Hoe") && !other.CompareTag("HoedDirt"))
             {
                 if (!Thingie.Contains(other.gameObject))
                 {
@@ -86,6 +95,7 @@ public class Ingredient : MonoBehaviour
         {
             case "Carrot":
                 vegetables[0] = state;
+                Debug.Log("Carrot" + vegetables[0]);
                 break;
             case "Potato":
                 vegetables[1] = state;
@@ -93,9 +103,8 @@ public class Ingredient : MonoBehaviour
             case "Flower":
                 vegetables[2] = state;
                 break;
-            case "Dirt":
-                dirt = state;
-                break;
+            
+               
             
 
         }
@@ -103,13 +112,15 @@ public class Ingredient : MonoBehaviour
 
     private void StartGrow()
     {
+       
         Vector3 spawnPos = (spawn.transform.position);
         for(int i = 0; i < vegetables.Length; i++)
         {
             if (vegetables[i] == true && dirt == true || dirt == true && vegetables[i] == true)
             {
-                Instantiate(Particle, spawnPos, Quaternion.identity);
-                Instantiate(Product[i], spawnPos, Quaternion.identity);
+                
+                crop = Instantiate(Product[i], spawnPos, Quaternion.identity);
+                
                 Reset();
             }
         }
@@ -119,13 +130,14 @@ public class Ingredient : MonoBehaviour
 
     private void Reset() 
     {
-        dirt = false;
+        
         for(int i = 0;  i < vegetables.Length; i++)
         {
             vegetables[i] = false;
         }
-
-        collisionTracker.collidingObjects.Clear();
+        
+        
+        collisionTracker.collidingObjects.RemoveAll(obj => obj != collisionTracker.keepThisOne);
         for (int i = 0; i < Thingie.Count; i++)
         {
             Destroy(Thingie[i]);

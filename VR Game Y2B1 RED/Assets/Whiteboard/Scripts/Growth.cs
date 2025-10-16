@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Growth : MonoBehaviour
 {
-    public float lifetime = 5f;
+    
     [SerializeField]
     public GameObject carrot;
     [SerializeField]
@@ -12,10 +12,11 @@ public class Growth : MonoBehaviour
     public float growthProgress;
     public float growthTime;
     public float speedMultiplier;
+    public float hydration = 0;
 
     private void Start()
     {
-        Debug.Log("Object created! Timer started.");
+        //Debug.Log("Object created! Timer started.");
         
         StartCoroutine(LifetimeTimer());
     }
@@ -35,15 +36,18 @@ public class Growth : MonoBehaviour
         while (growthProgress < growthTime)
         {
             // Apply speed multiplier
-            growthProgress += Time.deltaTime * speedMultiplier;
-
+            growthProgress += Time.deltaTime * speedMultiplier * hydration;
+            if(growthProgress/growthTime  > 0.5)
+            {
+                this.gameObject.transform.localScale = new Vector3(0.02f, 0.1f, 0.02f);
+            }
             // Optional: update a UI bar here
             yield return null;
         }
         CarrotsGrown++;
-        Debug.Log("carrots grown" + CarrotsGrown);
+        //Debug.Log("carrots grown" + CarrotsGrown);
         Vector3 spawnPos = (spawn.transform.position);
-        Instantiate(carrot, spawnPos, Quaternion.identity);
+        Instantiate(carrot, spawnPos, spawn.transform.rotation);
         
     }
 
@@ -51,7 +55,8 @@ public class Growth : MonoBehaviour
     {
         if(condition == true)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            
         }
     }
 }
