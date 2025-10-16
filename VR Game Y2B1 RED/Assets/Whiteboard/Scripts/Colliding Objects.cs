@@ -3,27 +3,42 @@ using System.Collections.Generic;
 
 public class CollisionTracker : MonoBehaviour
 {
+    public GameObject keepThisOne;
     public List<GameObject> collidingObjects = new List<GameObject>();
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collidingObjects.Contains(collision.gameObject))
+        if (!other.gameObject.CompareTag("Player"))
         {
-            collidingObjects.Add(collision.gameObject);
+            if (other.CompareTag("HoedDirt"))
+            {
+                keepThisOne = other.gameObject;
+                if (!collidingObjects.Contains(other.gameObject))
+                {
+                    collidingObjects.Add(keepThisOne);
+                }
+            }
+            if (!collidingObjects.Contains(other.gameObject))
+            {
+                collidingObjects.Add(other.gameObject);
+            }
+        }
+        
+
+        Debug.Log("Currently colliding with: " + collidingObjects.Count);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (collidingObjects.Contains(other.gameObject))
+        {
+            collidingObjects.Remove(other.gameObject);
         }
 
         Debug.Log("Currently colliding with: " + collidingObjects.Count);
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collidingObjects.Contains(collision.gameObject))
-        {
-            collidingObjects.Remove(collision.gameObject);
-        }
-
-        Debug.Log("Currently colliding with: " + collidingObjects.Count);
-    }
+   
 
     public int GetCollisionCount()
     {

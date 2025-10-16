@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1329294215048199678}
   - component: {fileID: 7887073892529956802}
   - component: {fileID: 8621324805707733052}
+  - component: {fileID: 4956777828487209219}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: GrownCarrot
@@ -90,7 +91,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -221,6 +222,18 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+--- !u!114 &4956777828487209219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759675578277015558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d413352118973684bb7bb70a8a9e685d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5361543616094742012
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 6979371242128044420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.167, y: -0, z: 0}
+  m_LocalPosition: {x: 0.1753, y: -0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []

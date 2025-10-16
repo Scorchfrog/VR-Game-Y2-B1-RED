@@ -150,8 +150,8 @@ MonoBehaviour:
   collisionTracker: {fileID: 5759798799122055491}
   spawn: {fileID: 5226486110053143023}
   Product:
-  - {fileID: 0}
-  Particle: {fileID: 0}
+  - {fileID: 7111977720318731317, guid: 5511746713b061f4db8d9bfac1debea3, type: 3}
+  Particle: {fileID: 4335655734816803015, guid: e9daa0a57292bd04fb6834712f4be0ac, type: 3}
   carry: {fileID: 0}
 --- !u!114 &5759798799122055491
 MonoBehaviour:

@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 471627cfae1744c4dbe366e5c2370cee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,10 +131,10 @@ MonoBehaviour:
   collisionTracker: {fileID: 7072603807103773548}
   spawn: {fileID: 5901808785887475624}
   Product:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Particle: {fileID: 0}
+  - {fileID: 1362867305970628641, guid: d5ba1276a1d8a484c9a8e2a541dbadae, type: 3}
+  - {fileID: 1178089888475569807, guid: 4e4c717983d0a3e40a935f696c493a0d, type: 3}
+  - {fileID: 6553659944116940688, guid: 930df4a952859d14480aafc290ba63c4, type: 3}
+  Particle: {fileID: 4335655734816803015, guid: e9daa0a57292bd04fb6834712f4be0ac, type: 3}
 --- !u!114 &7072603807103773548
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,8 @@ TagManager:
   - GrownCarrot
   - Seed
   - Speewer
+  - HoedDirt
+  - wCan
   layers:
   - Default
   - TransparentFX
