@@ -32,11 +32,11 @@ public class QuestTracker : MonoBehaviour
             {
                 growth.condition = true;
                 totalCarrots++;
-                Debug.Log("Carrots grown " + totalCarrots/2);
+                Debug.Log("Carrots grown " + totalCarrots);
             }
 
         }
-        if(totalCarrots/2 == 4 && questOne == false)
+        if(totalCarrots == 4 && questOne == false)
         {
             Vector3 spawnPos = spawn.transform.position;
             Instantiate(seedPrefab, spawnPos, Quaternion.identity);
