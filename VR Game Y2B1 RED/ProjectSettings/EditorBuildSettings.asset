@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start menu.unity
+    guid: 860e09741c7b4704fb28c17467c1d43c
+  - enabled: 1
+    path: Assets/Scenes/Greybox map.unity
+    guid: ec0c34e1c699f9d4aa9743622b310248
+  - enabled: 0
+    path: Assets/Scenes/1 Start Scene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   m_configObjects:

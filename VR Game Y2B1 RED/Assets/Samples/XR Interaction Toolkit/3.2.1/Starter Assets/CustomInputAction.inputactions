@@ -1,0 +1,34 @@
+{
+    "name": "CustomInputAction",
+    "maps": [
+        {
+            "name": "Game Menu",
+            "id": "493c83ab-9db4-4154-8fbc-643c5d4e96ab",
+            "actions": [
+                {
+                    "name": "Menu Press",
+                    "type": "Button",
+                    "id": "46806f80-7b1b-4ccb-9094-e3c431f028fb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "680ded1c-66d9-4727-8334-cc060e45a9d6",
+                    "path": "<XRController>{LeftHand}/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
