@@ -18,6 +18,7 @@ TagManager:
   - Speewer
   - HoedDirt
   - wCan
+  - Tomato
   layers:
   - Default
   - TransparentFX

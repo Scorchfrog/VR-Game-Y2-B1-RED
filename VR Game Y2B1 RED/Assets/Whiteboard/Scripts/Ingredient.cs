@@ -62,12 +62,13 @@ public class Ingredient : MonoBehaviour
             other.gameObject.transform.position = spawn.transform.position;
             //Debug.Log("object moves");
         }
-
+    /*
         if (other.CompareTag("Carrot"))
         {
             other.gameObject.transform.localScale = spawn.transform.localScale;
             other.gameObject.transform.position = spawn.transform.position;
         }
+    */
     }
 
     private void OnTriggerExit(Collider other)
@@ -97,10 +98,11 @@ public class Ingredient : MonoBehaviour
                 vegetables[0] = state;
                 Debug.Log("Carrot" + vegetables[0]);
                 break;
-            case "Potato":
+            case "Tomato":
                 vegetables[1] = state;
+                Debug.Log("Carrot" + vegetables[1]);
                 break;
-            case "Flower":
+            case "Lettuce":
                 vegetables[2] = state;
                 break;
             
@@ -118,8 +120,9 @@ public class Ingredient : MonoBehaviour
         {
             if (vegetables[i] == true && dirt == true || dirt == true && vegetables[i] == true)
             {
-                
+
                 crop = Instantiate(Product[i], spawnPos, Quaternion.identity);
+                if (crop != null) { crop.GetComponentInChildren<Growth>().crop[i] = true; }
                 
                 Reset();
             }

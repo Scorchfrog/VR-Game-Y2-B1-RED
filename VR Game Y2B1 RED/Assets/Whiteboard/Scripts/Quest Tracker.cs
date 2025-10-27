@@ -8,6 +8,8 @@ public class QuestTracker : MonoBehaviour
     public GameObject spawn;
     public GameObject seedPrefab;
     public int totalCarrots = 0;
+    public int totalTomatoes = 0;
+    public int totalLettuce = 0;
     public bool questOne = false;
     public List<GameObject> Thingie = new List<GameObject>();
 
@@ -31,8 +33,12 @@ public class QuestTracker : MonoBehaviour
             if (!Thingie.Contains(growth.gameObject))
             {
                 growth.condition = true;
-                totalCarrots++;
-                Debug.Log("Carrots grown " + totalCarrots);
+                if (growth.crop[0] == true) {totalCarrots++;}
+                else if (growth.crop[1] == true) { totalTomatoes++;}
+                else if (growth.crop[2] == true) { totalLettuce++;}
+
+                    Debug.Log("Carrots grown " + totalCarrots);
+                    Debug.Log("Tomatoes grown " + totalTomatoes);
             }
 
         }

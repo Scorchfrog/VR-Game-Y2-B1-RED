@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7738597249654623721}
   - component: {fileID: 5368343720849405079}
   m_Layer: 0
-  m_Name: 'Seedling which works ong ong '
+  m_Name: seedling tomato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c154b9f0a793134a9d1f71f03efb6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carrot: {fileID: 259520367635025349, guid: fa0012585d0325948818eb0b108090d8, type: 3}
+  carrot: {fileID: 6529519982955201448, guid: 44f4427c01beb70498d3a22c592873f2, type: 3}
   spawn: {fileID: 4427730210211572935}
   CarrotsGrown: 0
   condition: 0
