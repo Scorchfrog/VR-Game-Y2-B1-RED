@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class QuestTracker : MonoBehaviour
 {
@@ -12,11 +13,12 @@ public class QuestTracker : MonoBehaviour
     public int totalLettuce = 0;
     public bool questOne = false;
     public List<GameObject> Thingie = new List<GameObject>();
+    public TMP_Text carrotCount;
 
 
     void Update()
     {
-        
+        updateText();
         if (growth == null)
         {
             GameObject seedInstance = GameObject.FindWithTag("Seed"); 
@@ -33,12 +35,12 @@ public class QuestTracker : MonoBehaviour
             if (!Thingie.Contains(growth.gameObject))
             {
                 growth.condition = true;
-                if (growth.crop[0] == true) {totalCarrots++;}
-                else if (growth.crop[1] == true) { totalTomatoes++;}
+                if (growth.crop[0] == true) {totalCarrots++;  Debug.Log("Carrots grown " + totalCarrots); }
+                else if (growth.crop[1] == true) { totalTomatoes++; Debug.Log("Tomatoes grown " + totalTomatoes); }
                 else if (growth.crop[2] == true) { totalLettuce++;}
 
-                    Debug.Log("Carrots grown " + totalCarrots);
-                    Debug.Log("Tomatoes grown " + totalTomatoes);
+                    
+                    
             }
 
         }
@@ -50,5 +52,14 @@ public class QuestTracker : MonoBehaviour
             questOne = true;
         }
         
+    }
+
+    void updateText()
+    {
+        carrotCount.text =
+        "Quest 1\n" +
+        "Get 4 carrots\n" +
+        "Progress: " + totalCarrots.ToString() + "/4"
+        ;
     }
 }

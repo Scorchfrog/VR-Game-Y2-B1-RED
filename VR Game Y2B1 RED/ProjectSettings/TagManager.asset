@@ -19,6 +19,7 @@ TagManager:
   - HoedDirt
   - wCan
   - Tomato
+  - Lettuce
   layers:
   - Default
   - TransparentFX

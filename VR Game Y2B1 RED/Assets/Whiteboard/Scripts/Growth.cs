@@ -50,7 +50,7 @@ public class Growth : MonoBehaviour
         //Debug.Log("carrots grown" + CarrotsGrown);
         Vector3 spawnPos = (spawn.transform.position);
 
-        Instantiate(carrot, spawnPos, spawn.transform.rotation);
+        Instantiate(carrot, spawnPos, Quaternion.identity);
         
     }
 

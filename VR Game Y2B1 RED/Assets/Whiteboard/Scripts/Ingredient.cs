@@ -19,7 +19,7 @@ public class Ingredient : MonoBehaviour
     public GameObject[] Product;
     [SerializeField]
     public ParticleSystem Particle;
-    public GameObject crop;
+    private GameObject crop;
     
     
 
@@ -49,6 +49,7 @@ public class Ingredient : MonoBehaviour
                 
             
         }
+        /* unnecessary stuff
         if (other.CompareTag("HoedDirt"))
         {
             other.gameObject.transform.rotation = spawn.transform.rotation;
@@ -62,7 +63,7 @@ public class Ingredient : MonoBehaviour
             other.gameObject.transform.position = spawn.transform.position;
             //Debug.Log("object moves");
         }
-    /*
+    
         if (other.CompareTag("Carrot"))
         {
             other.gameObject.transform.localScale = spawn.transform.localScale;
