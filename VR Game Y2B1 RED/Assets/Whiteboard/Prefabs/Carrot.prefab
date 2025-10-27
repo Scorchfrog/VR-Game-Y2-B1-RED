@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7887073892529956802}
   - component: {fileID: 8621324805707733052}
   - component: {fileID: 4956777828487209219}
+  - component: {fileID: -8944584171491557105}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: GrownCarrot
@@ -234,6 +235,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d413352118973684bb7bb70a8a9e685d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8944584171491557105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3759675578277015558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3083cd912f67e674fbe0ccefd1bdc567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ProductSold:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5361543616094742012
 GameObject:
   m_ObjectHideFlags: 0
