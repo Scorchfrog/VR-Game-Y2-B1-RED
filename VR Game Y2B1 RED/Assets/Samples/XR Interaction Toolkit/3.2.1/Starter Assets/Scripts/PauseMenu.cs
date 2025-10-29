@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
@@ -6,7 +7,7 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject wristUI;
-    
+
     public bool activeWristUI = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,8 +15,8 @@ public class PauseMenu : MonoBehaviour
         DisplayWristUI();
     }
 
-  
-    public void PauseButtonPressed(InputAction.CallbackContext context) 
+
+    public void PauseButtonPressed(InputAction.CallbackContext context)
     {
 
         if (context.performed)
@@ -26,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     {
 
         if (activeWristUI)
-        { 
+        {
             wristUI.SetActive(false);
             activeWristUI = false;
             Time.timeScale = 1;
@@ -34,24 +35,31 @@ public class PauseMenu : MonoBehaviour
         else if (!activeWristUI)
         {
 
-            wristUI.SetActive (true);
+            wristUI.SetActive(true);
             activeWristUI = true;
             Time.timeScale = 0;
         }
     }
 
-    public void RestartGame() 
-    { 
+    public void RestartGame()
     
+    {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(string sceneName) 
+    
     {
+
 
         SceneManager.LoadScene(sceneName);
 
 
     }
+
+      
+
+
 }
