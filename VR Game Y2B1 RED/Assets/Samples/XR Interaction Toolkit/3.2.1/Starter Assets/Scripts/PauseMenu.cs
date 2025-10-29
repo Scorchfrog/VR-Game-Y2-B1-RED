@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
+
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject wristUI;
-    public UnityEvent EnableWristUI;
-
+    
     public bool activeWristUI = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,7 +27,6 @@ public class PauseMenu : MonoBehaviour
 
         if (activeWristUI)
         { 
-            EnableWristUI?.Invoke();
             wristUI.SetActive(false);
             activeWristUI = false;
             Time.timeScale = 1;
