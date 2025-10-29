@@ -125,9 +125,6 @@ PrefabInstance:
       addedObject: {fileID: 7909915712902199087}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 959512e12e998094bae872ca0177d521, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5578292994870192391}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 959512e12e998094bae872ca0177d521, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4368467698768612105}
   m_SourcePrefab: {fileID: 100100000, guid: 959512e12e998094bae872ca0177d521, type: 3}
 --- !u!4 &5896992541167606034 stripped
@@ -306,21 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d413352118973684bb7bb70a8a9e685d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5578292994870192391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6529519982955201448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drug1: 0
-  drug2: 0
-  drug3: 0
 --- !u!65 &4368467698768612105
 BoxCollider:
   m_ObjectHideFlags: 0

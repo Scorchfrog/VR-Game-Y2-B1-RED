@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Injection : MonoBehaviour
 {
-    private GameObject drugged;
+    
     public bool dose1 = false;
     public bool dose2 = false;
     public bool dose3 = false;
@@ -31,17 +31,14 @@ public class Injection : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("GrownCarrot"))
+        if (other.CompareTag("GrownCarrot")|| other.CompareTag("Tomato") || other.CompareTag("Lettuce"))
             Debug.Log("drugged");
         {
-            drugged = other.gameObject;
-            if (drugged != null)
-            {
-
-                if (dose1 == true && pressed == true) { drugged.GetComponent<Drugged>().drug1 = true; Debug.Log("drugged"); }
-                else if (dose2 == true && pressed == true) { drugged.GetComponent<Drugged>().drug2 = true; }
-                else if (dose3 == true && pressed == true) { drugged.GetComponent<Drugged>().drug3 = true; }
-            }
+   
+                if (dose1 == true) { other.gameObject.AddComponent<Drugged>().drug1 = true; Debug.Log("drugged"); }
+                else if (dose2 == true) { other.gameObject.AddComponent<Drugged>().drug2 = true; }
+                else if (dose3 == true) { other.gameObject.AddComponent<Drugged>().drug3 = true; }
+            
         }
     }
 }

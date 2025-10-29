@@ -51,7 +51,7 @@ public class Growth : MonoBehaviour
         Vector3 spawnPos = (spawn.transform.position);
 
         Instantiate(carrot, spawnPos, Quaternion.identity);
-        
+        condition = true;
     }
 
     public void Update()

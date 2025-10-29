@@ -14,6 +14,7 @@ public class QuestTracker : MonoBehaviour
     public bool questOne = false;
     public List<GameObject> Thingie = new List<GameObject>();
     public TMP_Text carrotCount;
+    
 
 
     void Update()
