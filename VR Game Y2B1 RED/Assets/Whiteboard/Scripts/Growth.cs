@@ -8,11 +8,13 @@ public class Growth : MonoBehaviour
     [SerializeField]
     public GameObject spawn;
     public int CarrotsGrown = 0;
+    
     public bool condition = false;
     public float growthProgress;
     public float growthTime;
     public float speedMultiplier;
     public float hydration = 0;
+    public bool[] crop;
 
     private void Start()
     {
@@ -47,8 +49,9 @@ public class Growth : MonoBehaviour
         CarrotsGrown++;
         //Debug.Log("carrots grown" + CarrotsGrown);
         Vector3 spawnPos = (spawn.transform.position);
-        Instantiate(carrot, spawnPos, spawn.transform.rotation);
-        
+
+        Instantiate(carrot, spawnPos, Quaternion.identity);
+        condition = true;
     }
 
     public void Update()

@@ -154,8 +154,8 @@ MonoBehaviour:
   spawn: {fileID: 6555272237102470971}
   Product:
   - {fileID: 957656081888951497, guid: 793dcbbf47b2b0d4d9da148389662eba, type: 3}
+  - {fileID: 957656081888951497, guid: ad8ae6e216caf1741898c66c9b07764b, type: 3}
   Particle: {fileID: 4335655734816803015, guid: e9daa0a57292bd04fb6834712f4be0ac, type: 3}
-  crop: {fileID: 0}
 --- !u!114 &2584945583207719367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb64daf2ce936384e82ecfa1f2b4ae61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keepThisOne: {fileID: 0}
   collidingObjects: []
 --- !u!1 &4258873050865633871
 GameObject:
@@ -705,11 +706,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5475050872088188611, guid: b150237675c3d0d44884d289671ffe0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7576672
+      value: 0.528
       objectReference: {fileID: 0}
     - target: {fileID: 5475050872088188611, guid: b150237675c3d0d44884d289671ffe0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5475050872088188611, guid: b150237675c3d0d44884d289671ffe0e, type: 3}
       propertyPath: m_LocalRotation.w
