@@ -208,7 +208,7 @@ MonoBehaviour:
   growthTime: 30
   speedMultiplier: 1
   hydration: 0
-  crop: 000000
+  skibidi: {x: 0.02, y: 0.08, z: 0.02}
 --- !u!1001 &8342188589533310490
 PrefabInstance:
   m_ObjectHideFlags: 0
