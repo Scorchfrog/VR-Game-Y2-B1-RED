@@ -1,0 +1,59 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.Events;
+
+public class PauseMenu : MonoBehaviour
+{
+    public GameObject wristUI;
+    public UnityEvent EnableWristUI;
+
+    public bool activeWristUI = true;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        DisplayWristUI();
+    }
+
+  
+    public void PauseButtonPressed(InputAction.CallbackContext context) 
+    {
+
+        if (context.performed)
+            DisplayWristUI();
+    }
+
+    public void DisplayWristUI()
+    {
+
+        if (activeWristUI)
+        { 
+            EnableWristUI?.Invoke();
+            wristUI.SetActive(false);
+            activeWristUI = false;
+            Time.timeScale = 1;
+        }
+        else if (!activeWristUI)
+        {
+
+            wristUI.SetActive (true);
+            activeWristUI = true;
+            Time.timeScale = 0;
+        }
+    }
+
+    public void RestartGame() 
+    { 
+    
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+
+        SceneManager.LoadScene(sceneName);
+
+
+    }
+}

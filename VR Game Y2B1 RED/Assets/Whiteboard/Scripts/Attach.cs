@@ -8,6 +8,7 @@ public class DirtCarry : MonoBehaviour
     public bool Attached = false;
     private void Start()
     {
+
         customButton.action.started += Drop;
     }
 
@@ -55,7 +56,7 @@ public class DirtCarry : MonoBehaviour
 
     private void Update()
     {
-        
+        // Example: press space to drop the dirt
         
 
     }
