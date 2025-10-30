@@ -56,9 +56,9 @@ public class Orders : MonoBehaviour
 
     void GenerateNewOrder()
     {
-        requiredCarrots = Random.Range(1, 1);
-        requiredTomatoes = Random.Range(1, 1);
-        requiredLettuces = Random.Range(1, 1);
+        requiredCarrots = Random.Range(1, 3);
+        requiredTomatoes = Random.Range(4, 8);
+        requiredLettuces = Random.Range(1, 2);
 
         if (requiredCarrots + requiredTomatoes + requiredLettuces == 0)
             GenerateNewOrder();
@@ -109,23 +109,23 @@ public class Orders : MonoBehaviour
             }
             else if (drug.drug1)
             {
-                suspicion_Manager.GetSuspicion(1f);
-                suspicion_Manager.GetAddiction(1f);
+                suspicion_Manager.GetSuspicion(10f);
+                suspicion_Manager.GetAddiction(10f);
 
                 //sus += 10;
                 //addic += 10;
             }
             else if (drug.drug2)
             {
-                suspicion_Manager.GetSuspicion(2f);
-                suspicion_Manager.GetAddiction(2f);
+                suspicion_Manager.GetSuspicion(20f);
+                suspicion_Manager.GetAddiction(20f);
                 //sus += 20;
                 //addic += 25;
             }
             else if (drug.drug3)
             {
-                suspicion_Manager.GetSuspicion(3f);
-                suspicion_Manager.GetAddiction(3f);
+                suspicion_Manager.GetSuspicion(30f);
+                suspicion_Manager.GetAddiction(30f);
                 //sus += 50;
                 //addic += 40;
             }
