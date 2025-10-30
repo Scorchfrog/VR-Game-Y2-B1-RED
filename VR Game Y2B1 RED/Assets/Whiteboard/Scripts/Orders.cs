@@ -23,13 +23,15 @@ public class Orders : MonoBehaviour
     public int windowNumber;
 
     private GameObject drugged;
-    public int sus = 0;
-    public int addic = 0;
-    public int susMax = 100;
-    public int addicMax = 100;
-    public int susMin = 0;
-    public int addicMin = 0;
-    
+    public float sus = 0;
+    public float addic = 0;
+    public float susMax = 100;
+    public float addicMax = 100;
+    public float susMin = 0;
+    public float addicMin = 0;
+
+    public Suspicion_manager suspicion_Manager;
+
     void Start()
     {
         GenerateNewOrder();
@@ -54,9 +56,9 @@ public class Orders : MonoBehaviour
 
     void GenerateNewOrder()
     {
-        requiredCarrots = Random.Range(1, 3);
-        requiredTomatoes = Random.Range(4, 8);
-        requiredLettuces = Random.Range(1, 2);
+        requiredCarrots = Random.Range(1, 1);
+        requiredTomatoes = Random.Range(1, 1);
+        requiredLettuces = Random.Range(1, 1);
 
         if (requiredCarrots + requiredTomatoes + requiredLettuces == 0)
             GenerateNewOrder();
@@ -98,23 +100,34 @@ public class Orders : MonoBehaviour
 
             if (drug == null)
             {
-                sus -= 10;
-                addic -= 5;
+                
+                suspicion_Manager.LoseSuspicion(1f);
+                suspicion_Manager.LoseAddiction(1f);
+                Debug.Log("Yes" + suspicion_Manager.suspicionAmount);
+                //sus -= 10;
+                //addic -= 5;
             }
             else if (drug.drug1)
             {
-                sus += 10;
-                addic += 10;
+                suspicion_Manager.GetSuspicion(1f);
+                suspicion_Manager.GetAddiction(1f);
+
+                //sus += 10;
+                //addic += 10;
             }
             else if (drug.drug2)
             {
-                sus += 20;
-                addic += 25;
+                suspicion_Manager.GetSuspicion(2f);
+                suspicion_Manager.GetAddiction(2f);
+                //sus += 20;
+                //addic += 25;
             }
             else if (drug.drug3)
             {
-                sus += 50;
-                addic += 40;
+                suspicion_Manager.GetSuspicion(3f);
+                suspicion_Manager.GetAddiction(3f);
+                //sus += 50;
+                //addic += 40;
             }
         }
     }
