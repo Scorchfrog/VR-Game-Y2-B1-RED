@@ -14,7 +14,9 @@ public class Growth : MonoBehaviour
     public float growthTime;
     public float speedMultiplier;
     public float hydration = 0;
-    public bool[] crop;
+    public Vector3 skibidi = new Vector3(0.5f, 0.5f, 0.5f);
+
+
 
     private void Start()
     {
@@ -23,15 +25,6 @@ public class Growth : MonoBehaviour
         StartCoroutine(LifetimeTimer());
     }
 
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Speewer"))
-        {
-            speedMultiplier = 3f;
-            Destroy(collision.gameObject);
-            Debug.Log("Sped Up " + speedMultiplier);
-        }
-    }
 
     private System.Collections.IEnumerator LifetimeTimer()
     {
@@ -41,7 +34,7 @@ public class Growth : MonoBehaviour
             growthProgress += Time.deltaTime * speedMultiplier * hydration;
             if(growthProgress/growthTime  > 0.5)
             {
-                this.gameObject.transform.localScale = new Vector3(0.02f, 0.1f, 0.02f);
+                this.gameObject.transform.localScale = skibidi;
             }
             // Optional: update a UI bar here
             yield return null;
@@ -52,14 +45,11 @@ public class Growth : MonoBehaviour
 
         Instantiate(carrot, spawnPos, Quaternion.identity);
         condition = true;
+        Destroy(this.gameObject);
     }
 
     public void Update()
     {
-        if(condition == true)
-        {
-            Destroy(this.gameObject);
-            
-        }
+        
     }
 }

@@ -123,7 +123,7 @@ public class Ingredient : MonoBehaviour
             {
 
                 crop = Instantiate(Product[i], spawnPos, Quaternion.identity);
-                if (crop != null) { crop.GetComponentInChildren<Growth>().crop[i] = true; }
+                
                 
                 Reset();
             }
