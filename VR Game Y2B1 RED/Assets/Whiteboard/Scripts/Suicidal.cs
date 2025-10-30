@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class scrip : MonoBehaviour
+public class Suicidal : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -11,14 +11,9 @@ public class scrip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Win")
+        if (transform.childCount == 2)
         {
-            Debug.Log("complete");
+            Destroy(gameObject);
         }
     }
 }

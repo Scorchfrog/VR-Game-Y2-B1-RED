@@ -18,6 +18,9 @@ TagManager:
   - Speewer
   - HoedDirt
   - wCan
+  - Tomato
+  - Lettuce
+  - LettuceSeed
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class Ingredient : MonoBehaviour
     public GameObject[] Product;
     [SerializeField]
     public ParticleSystem Particle;
-    public GameObject crop;
+    private GameObject crop;
     
     
 
@@ -49,6 +49,7 @@ public class Ingredient : MonoBehaviour
                 
             
         }
+        /* unnecessary stuff
         if (other.CompareTag("HoedDirt"))
         {
             other.gameObject.transform.rotation = spawn.transform.rotation;
@@ -62,12 +63,13 @@ public class Ingredient : MonoBehaviour
             other.gameObject.transform.position = spawn.transform.position;
             //Debug.Log("object moves");
         }
-
+    
         if (other.CompareTag("Carrot"))
         {
             other.gameObject.transform.localScale = spawn.transform.localScale;
             other.gameObject.transform.position = spawn.transform.position;
         }
+    */
     }
 
     private void OnTriggerExit(Collider other)
@@ -97,10 +99,11 @@ public class Ingredient : MonoBehaviour
                 vegetables[0] = state;
                 Debug.Log("Carrot" + vegetables[0]);
                 break;
-            case "Potato":
+            case "Tomato":
                 vegetables[1] = state;
+                Debug.Log("Carrot" + vegetables[1]);
                 break;
-            case "Flower":
+            case "LettuceSeed":
                 vegetables[2] = state;
                 break;
             
@@ -118,8 +121,9 @@ public class Ingredient : MonoBehaviour
         {
             if (vegetables[i] == true && dirt == true || dirt == true && vegetables[i] == true)
             {
-                
+
                 crop = Instantiate(Product[i], spawnPos, Quaternion.identity);
+                
                 
                 Reset();
             }

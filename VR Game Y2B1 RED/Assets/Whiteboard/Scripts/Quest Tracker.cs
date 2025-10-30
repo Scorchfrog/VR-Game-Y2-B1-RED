@@ -1,5 +1,7 @@
+/*
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class QuestTracker : MonoBehaviour
 {
@@ -8,13 +10,17 @@ public class QuestTracker : MonoBehaviour
     public GameObject spawn;
     public GameObject seedPrefab;
     public int totalCarrots = 0;
+    public int totalTomatoes = 0;
+    public int totalLettuce = 0;
     public bool questOne = false;
     public List<GameObject> Thingie = new List<GameObject>();
+    public TMP_Text carrotCount;
+    
 
 
     void Update()
     {
-        
+        updateText();
         if (growth == null)
         {
             GameObject seedInstance = GameObject.FindWithTag("Seed"); 
@@ -45,4 +51,14 @@ public class QuestTracker : MonoBehaviour
         }
         
     }
+
+    void updateText()
+    {
+        carrotCount.text =
+        "Quest 1\n" +
+        "Get 4 carrots\n" +
+        "Progress: " + totalCarrots.ToString() + "/4"
+        ;
+    }
 }
+*/
