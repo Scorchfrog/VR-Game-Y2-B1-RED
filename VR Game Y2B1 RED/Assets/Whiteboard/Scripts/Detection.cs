@@ -19,8 +19,6 @@ public class Detection : MonoBehaviour
     public GameObject[] Product;
     [SerializeField]
     public ParticleSystem Particle;
-    [SerializeField]
-    public GameObject syringe;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -94,31 +92,19 @@ public class Detection : MonoBehaviour
         if (Speed == true && Power == true || Power == true && Speed == true) 
         {
             Instantiate(Particle, spawnPos, Quaternion.identity);
-            syringe = Instantiate(Product[0], spawnPos, Quaternion.identity);
-            if (syringe != null)
-            {
-                syringe.GetComponent<Injection>().dose1 = true;
-            }
-                Reset();
+            Instantiate(Product[0], spawnPos, Quaternion.identity);
+            Reset();
         }
             else if (Speed == true && Something == true || Something == true && Speed == true)
         {
             Instantiate(Particle, spawnPos, Quaternion.identity);
-            syringe = Instantiate(Product[1], spawnPos, Quaternion.identity);
-            if (syringe != null)
-            {
-                syringe.GetComponent<Injection>().dose2 = true;
-            }
+            Instantiate(Product[1], spawnPos, Quaternion.identity);
             Reset();
         }
             else if (Power == true && Something == true || Something == true && Power == true)
         {
             Instantiate(Particle, spawnPos, Quaternion.identity);
-            syringe = Instantiate(Product[2], spawnPos, Quaternion.identity);
-            if (syringe != null)
-            {
-                syringe.GetComponent<Injection>().dose3 = true;
-            }
+            Instantiate(Product[2], spawnPos, Quaternion.identity);
             Reset();
         }
         

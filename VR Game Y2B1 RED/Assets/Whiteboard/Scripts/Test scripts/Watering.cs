@@ -43,14 +43,12 @@ public class Watering : MonoBehaviour
 
     private System.Collections.IEnumerator LifetimeTimer()
     {
-        
-        yield return new WaitForSeconds(2); //THIS VERY VERY IMPORTANT!!!!!!!!
+        yield return new WaitForSeconds(2);
         while (0 < currentWater)
         {
             
             currentWater -= Time.deltaTime;
 
-            
             if (currentWater > 75 && triggered[0] == false)
             {
                 growth.speedMultiplier = 1;

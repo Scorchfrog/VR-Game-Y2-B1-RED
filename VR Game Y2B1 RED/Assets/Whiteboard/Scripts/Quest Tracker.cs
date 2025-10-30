@@ -37,16 +37,12 @@ public class QuestTracker : MonoBehaviour
             if (!Thingie.Contains(growth.gameObject))
             {
                 growth.condition = true;
-                if (growth.crop[0] == true) {totalCarrots++;  Debug.Log("Carrots grown " + totalCarrots); }
-                else if (growth.crop[1] == true) { totalTomatoes++; Debug.Log("Tomatoes grown " + totalTomatoes); }
-                else if (growth.crop[2] == true) { totalLettuce++;}
-
-                    
-                    
+                totalCarrots++;
+                Debug.Log("Carrots grown " + totalCarrots/2);
             }
 
         }
-        if(totalCarrots == 4 && questOne == false)
+        if(totalCarrots/2 == 4 && questOne == false)
         {
             Vector3 spawnPos = spawn.transform.position;
             Instantiate(seedPrefab, spawnPos, Quaternion.identity);
