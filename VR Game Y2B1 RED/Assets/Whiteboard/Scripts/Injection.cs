@@ -35,8 +35,8 @@ public class Injection : MonoBehaviour
             Debug.Log("drugged");
         {
    
-                if (dose1 == true) { other.gameObject.AddComponent<Drugged>().drug1 = true; Debug.Log("drugged"); }
-                else if (dose2 == true) { other.gameObject.AddComponent<Drugged>().drug2 = true; }
+                if (dose1 == true) { other.gameObject.AddComponent<Drugged>().drug1 = true; Debug.Log("drugged"); return; }
+                else if (dose2 == true) { other.gameObject.AddComponent<Drugged>().drug2 = true; return; }
                 else if (dose3 == true) { other.gameObject.AddComponent<Drugged>().drug3 = true; }
             
         }
