@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1844642037250362796}
   - component: {fileID: 2244827488872875364}
   - component: {fileID: 8139269545771004440}
+  - component: {fileID: 5123848103002182478}
   m_Layer: 0
   m_Name: Carrot 1
   m_TagString: GrownCarrot
@@ -225,6 +226,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05, y: 0.3, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5123848103002182478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259520367635025349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drug1: 0
+  drug2: 0
+  drug3: 0
+  drugged: 0
 --- !u!1 &7484816633246426597
 GameObject:
   m_ObjectHideFlags: 0

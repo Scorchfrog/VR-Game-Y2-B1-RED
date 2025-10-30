@@ -98,7 +98,7 @@ public class Orders : MonoBehaviour
 
             Drugged drug = crop.GetComponent<Drugged>();
 
-            if (drug == null)
+            if (drug.drug1 == false && drug.drug2 == false && drug.drug3 == false)
             {
                 
                 suspicion_Manager.LoseSuspicion(1f);
@@ -107,7 +107,7 @@ public class Orders : MonoBehaviour
                 //sus -= 10;
                 //addic -= 5;
             }
-            else if (drug.drug1)
+            else if (drug.drug1 == true)
             {
                 suspicion_Manager.GetSuspicion(10f);
                 suspicion_Manager.GetAddiction(10f);
@@ -115,14 +115,14 @@ public class Orders : MonoBehaviour
                 //sus += 10;
                 //addic += 10;
             }
-            else if (drug.drug2)
+            else if (drug.drug2 == true)
             {
                 suspicion_Manager.GetSuspicion(20f);
                 suspicion_Manager.GetAddiction(20f);
                 //sus += 20;
                 //addic += 25;
             }
-            else if (drug.drug3)
+            else if (drug.drug3 == true)
             {
                 suspicion_Manager.GetSuspicion(30f);
                 suspicion_Manager.GetAddiction(30f);
