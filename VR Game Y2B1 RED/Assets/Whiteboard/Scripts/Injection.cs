@@ -11,6 +11,7 @@ public class Injection : MonoBehaviour
     public bool dose2 = false;
     public bool dose3 = false;
     private bool pressed = false;
+    public int durability = 0;
     public InputActionReference customButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,10 +36,10 @@ public class Injection : MonoBehaviour
             Debug.Log("drugged");
         {
    
-                if (dose1 == true) { other.gameObject.AddComponent<Drugged>().drug1 = true; Debug.Log("drugged"); return; }
-                else if (dose2 == true) { other.gameObject.AddComponent<Drugged>().drug2 = true; return; }
-                else if (dose3 == true) { other.gameObject.AddComponent<Drugged>().drug3 = true; }
-            
+                if (dose1 == true && pressed == true) { other.gameObject.AddComponent<Drugged>().drug1 = true; Debug.Log("drugged"); durability--; return; }
+                else if (dose2 == true && pressed == true) { other.gameObject.AddComponent<Drugged>().drug2 = true; durability--; return; }
+                else if (dose3 == true && pressed == true) { other.gameObject.AddComponent<Drugged>().drug3 = true; durability--; }
+                if(durability == 0) {Destroy(this);}
         }
     }
 }

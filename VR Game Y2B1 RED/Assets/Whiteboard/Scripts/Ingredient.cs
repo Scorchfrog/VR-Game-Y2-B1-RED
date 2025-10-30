@@ -103,7 +103,7 @@ public class Ingredient : MonoBehaviour
                 vegetables[1] = state;
                 Debug.Log("Carrot" + vegetables[1]);
                 break;
-            case "Lettuce":
+            case "LettuceSeed":
                 vegetables[2] = state;
                 break;
             

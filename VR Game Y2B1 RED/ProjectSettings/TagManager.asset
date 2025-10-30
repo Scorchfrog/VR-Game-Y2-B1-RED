@@ -20,6 +20,7 @@ TagManager:
   - wCan
   - Tomato
   - Lettuce
+  - LettuceSeed
   layers:
   - Default
   - TransparentFX

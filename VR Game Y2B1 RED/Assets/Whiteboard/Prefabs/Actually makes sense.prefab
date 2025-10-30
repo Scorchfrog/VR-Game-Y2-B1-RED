@@ -155,6 +155,7 @@ MonoBehaviour:
   Product:
   - {fileID: 957656081888951497, guid: 793dcbbf47b2b0d4d9da148389662eba, type: 3}
   - {fileID: 957656081888951497, guid: ad8ae6e216caf1741898c66c9b07764b, type: 3}
+  - {fileID: 957656081888951497, guid: ac0c265e117e9a34094ca56295a2bc29, type: 3}
   Particle: {fileID: 4335655734816803015, guid: e9daa0a57292bd04fb6834712f4be0ac, type: 3}
 --- !u!114 &2584945583207719367
 MonoBehaviour:
