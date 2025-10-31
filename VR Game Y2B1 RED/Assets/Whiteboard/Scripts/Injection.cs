@@ -40,7 +40,7 @@ public class Injection : MonoBehaviour
             
         {
                 injection = other.gameObject;
-                if (dose1 == true && injection.GetComponent<Drugged>().drugged == false /*&& pressed == true*/) 
+                if (dose1 == true && injection.GetComponent<Drugged>().drugged == false && pressed == true) 
                 { 
                 injection.GetComponent<Drugged>().drug1 = true; 
                 injection.GetComponent<Drugged>().amDrugged(); 
@@ -48,7 +48,7 @@ public class Injection : MonoBehaviour
                 pressed = false;
                 durability--;
                 }
-                else if (dose2 == true && injection.GetComponent<Drugged>().drugged == false/*&& pressed == true*/)
+                else if (dose2 == true && injection.GetComponent<Drugged>().drugged == false&& pressed == true)
                 { 
                 injection.GetComponent<Drugged>().drug2 = true;
                 injection.GetComponent<Drugged>().amDrugged();
@@ -56,7 +56,7 @@ public class Injection : MonoBehaviour
                 pressed = false;
                 durability--;
                 }
-                else if (dose3 == true && injection.GetComponent<Drugged>().drugged == false/*&& pressed == true*/)
+                else if (dose3 == true && injection.GetComponent<Drugged>().drugged == false&& pressed == true)
                 { 
                 injection.GetComponent<Drugged>().drug3 = true;
                 injection.GetComponent<Drugged>().amDrugged();
