@@ -9,6 +9,7 @@ public class Growth : MonoBehaviour
     public GameObject spawn;
     public int CarrotsGrown = 0;
     
+    
     public bool condition = false;
     public float growthProgress;
     public float growthTime;
@@ -44,6 +45,7 @@ public class Growth : MonoBehaviour
         Vector3 spawnPos = (spawn.transform.position);
 
         Instantiate(carrot, spawnPos, Quaternion.identity);
+        
         condition = true;
         Destroy(this.gameObject);
     }
