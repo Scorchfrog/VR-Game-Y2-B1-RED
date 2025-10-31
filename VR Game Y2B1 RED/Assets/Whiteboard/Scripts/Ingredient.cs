@@ -20,12 +20,14 @@ public class Ingredient : MonoBehaviour
     [SerializeField]
     public ParticleSystem Particle;
     private GameObject crop;
+    public bool currentlyGrowing = false;
+    private float joseph;
     
     
 
     private void Update()
     {
-        if (collisionTracker.GetCollisionCount() == 2)
+        if (collisionTracker.GetCollisionCount() == 2 && currentlyGrowing == false)
         {
             StartGrow();
         }
@@ -80,7 +82,7 @@ public class Ingredient : MonoBehaviour
             Planted(other.tag, false);
             if (!other.CompareTag("Hoe") && !other.CompareTag("HoedDirt"))
             {
-                if (!Thingie.Contains(other.gameObject))
+                if (Thingie.Contains(other.gameObject))
                 {
                     Thingie.Remove(other.gameObject);
                     //Debug.Log("Skibidi");
@@ -121,15 +123,26 @@ public class Ingredient : MonoBehaviour
         {
             if (vegetables[i] == true && dirt == true || dirt == true && vegetables[i] == true)
             {
-
+                
                 crop = Instantiate(Product[i], spawnPos, Quaternion.identity);
-                
-                
+
+                joseph = Product[i].GetComponentInChildren<Growth>().growthTime;
+                currentlyGrowing = true;
+                StartCoroutine(Occupied());
+
+
                 Reset();
             }
         }
         
         
+    }
+
+
+    public System.Collections.IEnumerator Occupied()
+    {
+        yield return new WaitForSeconds(joseph + joseph/2);
+        currentlyGrowing = false;
     }
 
     private void Reset() 
