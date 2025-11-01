@@ -104,8 +104,8 @@ public class Orders : MonoBehaviour
             if (drug.drug1 == false && drug.drug2 == false && drug.drug3 == false)
             {
                 
-                suspicion_Manager.LoseSuspicion(1f);
-                suspicion_Manager.LoseAddiction(1f);
+                suspicion_Manager.GetSuspicion(1f);
+                suspicion_Manager.GetAddiction(1f);
                 Debug.Log("Yes" + suspicion_Manager.suspicionAmount);
                 //sus -= 10;
                 //addic -= 5;
