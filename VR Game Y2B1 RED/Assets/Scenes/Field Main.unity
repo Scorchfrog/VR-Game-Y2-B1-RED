@@ -12793,6 +12793,7 @@ MonoBehaviour:
   requiredCarrots: 0
   requiredTomatoes: 0
   requiredLettuces: 0
+  moneyText: {fileID: 1757096453}
   questText: {fileID: 5334037119212770605}
   windowNumber: 1
   sus: 0
@@ -21205,7 +21206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5895826684305351068, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5944131804917401860, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
@@ -21213,7 +21214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6038107472648090404, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Radius
@@ -28983,7 +28984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3393299552754136949, guid: c720ccd2709ad37409e3f34c599f4a8f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

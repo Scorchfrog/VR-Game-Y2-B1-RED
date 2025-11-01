@@ -19,6 +19,7 @@ public class Orders : MonoBehaviour
     public int requiredTomatoes;
     public int requiredLettuces;
 
+    public TMP_Text moneyText;
     public TMP_Text questText;
     public int windowNumber;
 
@@ -76,7 +77,9 @@ public class Orders : MonoBehaviour
             $"Carrots: {Carrot.Count}/{requiredCarrots}\n" +
             $"Tomatoes: {Tomato.Count}/{requiredTomatoes}\n" +
             $"Lettuce: {Lettuce.Count}/{requiredLettuces}";
-            
+        moneyText.text = $"<b>Money ${Money}</b>\n";
+
+
     }
 
     void CheckOrder()

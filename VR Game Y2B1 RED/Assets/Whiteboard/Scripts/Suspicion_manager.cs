@@ -24,8 +24,7 @@ public class Suspicion_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sus = orders.sus;
-        addic = orders.addic;
+        
         
     }
 
