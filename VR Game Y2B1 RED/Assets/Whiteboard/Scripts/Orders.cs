@@ -10,7 +10,7 @@ public class Orders : MonoBehaviour
     public List<GameObject> Tomato = new List<GameObject>();
     public List<GameObject> Lettuce = new List<GameObject>();
 
-    public int Money = 0;
+    public int Money = 20;
     public int carrotPrice = 25;
     public int tomatoPrice = 25;
     public int lettucePrice = 25;
@@ -69,7 +69,7 @@ public class Orders : MonoBehaviour
         UpdateQuestText();
     }
 
-    void UpdateQuestText()
+    public void UpdateQuestText()
     {
         questText.text =
             $"<b>Customer {windowNumber}</b>\n" +
