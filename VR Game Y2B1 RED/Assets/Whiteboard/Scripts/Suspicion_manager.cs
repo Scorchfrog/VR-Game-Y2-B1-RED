@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Suspicion_manager : MonoBehaviour
 {
     public Image suspicionBar;
-    public float suspicionAmount = 1000f;
+    public float suspicionAmount = 0f;
 
     public Image addictionBar;
     public float addictionAmount = 0f;
