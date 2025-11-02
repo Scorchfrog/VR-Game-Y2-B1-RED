@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 7293363077789939709}
   - component: {fileID: 8747201767490895139}
   - component: {fileID: 7873954257288447079}
-  - component: {fileID: 614832196495337783}
+  - component: {fileID: 2066167122739098919}
   m_Layer: 0
   m_Name: Tomato (3)
   m_TagString: Tomato
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &614832196495337783
+--- !u!114 &2066167122739098919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -365,9 +365,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 851107191694524130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
+  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drug1: 0
+  drug2: 0
+  drug3: 0
+  drugged: 0
 --- !u!1 &1079067862122346441
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +472,7 @@ GameObject:
   - component: {fileID: 4735137886226412723}
   - component: {fileID: 2528037152050968548}
   - component: {fileID: 4578437288506698330}
-  - component: {fileID: 5180909271579673927}
+  - component: {fileID: 3180372432002082712}
   m_Layer: 0
   m_Name: Tomato (1)
   m_TagString: Tomato
@@ -693,7 +697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5180909271579673927
+--- !u!114 &3180372432002082712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -702,9 +706,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1244884019292720418}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
+  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drug1: 0
+  drug2: 0
+  drug3: 0
+  drugged: 0
 --- !u!1 &1442448420829881777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1071,7 @@ GameObject:
   - component: {fileID: 9098982607857375730}
   - component: {fileID: 7158257234900625153}
   - component: {fileID: 4554283298662140634}
-  - component: {fileID: 1523880443945608122}
+  - component: {fileID: 8974624966716700067}
   m_Layer: 0
   m_Name: Tomato (4)
   m_TagString: Tomato
@@ -1288,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1523880443945608122
+--- !u!114 &8974624966716700067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1297,9 +1305,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3415852956236065967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
+  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drug1: 0
+  drug2: 0
+  drug3: 0
+  drugged: 0
 --- !u!1 &4402437160720385903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1524,7 @@ GameObject:
   - component: {fileID: 3386422066677613212}
   - component: {fileID: 1945304047272136929}
   - component: {fileID: 3785715436073500110}
-  - component: {fileID: 5269028905178891781}
+  - component: {fileID: 4344473293029034747}
   m_Layer: 0
   m_Name: Tomato (2)
   m_TagString: Tomato
@@ -1737,7 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5269028905178891781
+--- !u!114 &4344473293029034747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1746,9 +1758,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7523255708127554870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8daa53b3a50b2ca4fa599754962e1069, type: 3}
+  m_Script: {fileID: 11500000, guid: 4235912db0014bf4f950f0c15d312ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drug1: 0
+  drug2: 0
+  drug3: 0
+  drugged: 0
 --- !u!1 &7544920492426516060
 GameObject:
   m_ObjectHideFlags: 0

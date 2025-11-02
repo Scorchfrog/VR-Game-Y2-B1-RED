@@ -40,7 +40,7 @@ public class Injection : MonoBehaviour
             
         {
                 injection = other.gameObject;
-                if (dose1 == true && injection.GetComponent<Drugged>().drugged == false && pressed == true) 
+                if (dose1 == true && injection.GetComponent<Drugged>().drugged == false) 
                 { 
                 injection.GetComponent<Drugged>().drug1 = true; 
                 injection.GetComponent<Drugged>().amDrugged(); 
